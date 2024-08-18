@@ -9,13 +9,13 @@ namespace Watt_2_Watch
         {
             Database db = new Database(Properties.Resources.MoviesDatabase);
 
-            List<DatabaseRecord>  Shows = db.FilterByGenre(["horror"]);
+            //List<DatabaseRecord>  Shows = db.FilterByGenre(["horror"]);
 
-            Console.WriteLine($"Shows found: {Shows.Count}\r\n\n");
-            foreach (DatabaseRecord rec in Shows)
-            {
-                Console.WriteLine($"Title:{rec.OriginalTitle} Genre: {rec.Genres}.");
-            }
+            //Console.WriteLine($"Shows found: {Shows.Count}\r\n\n");
+            //foreach (DatabaseRecord rec in Shows)
+            //{
+            //    Console.WriteLine($"Title:{rec.OriginalTitle} Genre: {rec.Genres}.");
+            //}
 
             var user = new Dictionary<string, object>
             {

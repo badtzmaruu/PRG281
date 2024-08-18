@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Watt-2-Watch/1.0.0": {
+        "runtime": {
+          "Watt-2-Watch.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Watt-2-Watch/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

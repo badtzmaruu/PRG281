@@ -16,6 +16,26 @@ namespace Watt_2_Watch
                 Console.WriteLine($"Title:{rec.OriginalTitle} Genre: {rec.Genres}.");
             }
 
+            var user = new Dictionary<string, object>
+            {
+                { "Name", "John" },
+                { "Surname", "Doe" },
+                { "PreferredGenres", new Dictionary<string, int> { { "Action", 5 }, { "Comedy", 7 }, { "Drama", 4} } }
+            };
+
+            var user2 = new Dictionary<string, object>
+            {
+                { "Name", "John" },
+                { "Surname", "Doe" },
+                { "PreferredGenres", new Dictionary<string, int> { { "Documentary", 5 }, { "Animation", 7 }, { "Romance", 4} } }
+            };
+
+            var engine2 = new recommendationEngine(user2, db);
+            engine2.RecommendShows();
+
+            var engine = new recommendationEngine(user, db);
+            engine.RecommendShows();
+
 
             Console.ReadKey();
         }

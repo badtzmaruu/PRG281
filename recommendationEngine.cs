@@ -7,14 +7,14 @@ using System.Threading;
 using static Watt_2_Watch.Database;
 using Watt_2_Watch;
 
-namespace Dummy2
+namespace Watt_2_Watch
 {
-    internal class recommendationEngine
+    internal class RecommendationEngine
     {
         private Dictionary<string, object> user;
         private Database db;
 
-        public recommendationEngine(Dictionary<string, object> user, Database db)
+        public RecommendationEngine(Dictionary<string, object> user, Database db)
         {
             this.user = user;
             this.db = db;

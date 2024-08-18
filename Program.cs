@@ -1,5 +1,6 @@
 ﻿using static Watt_2_Watch.Database;
 
+
 namespace Watt_2_Watch
 {
     internal class Program
@@ -30,10 +31,10 @@ namespace Watt_2_Watch
                 { "PreferredGenres", new Dictionary<string, int> { { "Documentary", 5 }, { "Animation", 7 }, { "Romance", 4} } }
             };
 
-            var engine2 = new recommendationEngine(user2, db);
+            var engine2 = new RecommendationEngine(user2, db);
             engine2.RecommendShows();
 
-            var engine = new recommendationEngine(user, db);
+            var engine = new RecommendationEngine(user, db);
             engine.RecommendShows();
 
 

@@ -23,9 +23,10 @@ namespace Watt_2_Watch
         public void RecommendShows()
         {
             var genreRankings = (Dictionary<string, int>)user["PreferredGenres"];
+            //Orders the list in acceding order
             var sortedGenres = genreRankings.OrderBy(gr => gr.Value).Select(gr => gr.Key).ToList();
+            //Reverses order of list to display the most ranked genre first
             sortedGenres.Reverse();
-            //string[] preferredGenres = ((List<string>)user["PreferredGenres"]).ToArray();
 
             Random random = new Random();
 

@@ -14,6 +14,19 @@ namespace Watt_2_Watch
         /// Turns the Movies Database text file into accessible records.
         /// </summary>
         /// <param name="DatabaseFile"></param>
+        /// 
+
+        public List<string> GetValidGenres()
+        {
+            return Records.SelectMany(record => record.Genres)
+                          .Select(genre => genre.Trim()) 
+                          .Distinct()
+                          .Where(g => !string.IsNullOrWhiteSpace(g)) 
+                          .ToList();
+        }
+
+
+
         public Database(string DatabaseFile)
         {
             string[] lines = DatabaseFile.Split('\n');
@@ -47,6 +60,7 @@ namespace Watt_2_Watch
                             EndYear = endYear,
                             RuntimeMinutes = runtimeMinutes,
                             Genres = fields[8].Split(',').ToList(),
+
                         };
 
                         Records.Add(Record);

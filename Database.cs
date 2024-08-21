@@ -11,7 +11,7 @@ namespace Watt_2_Watch
     {
         #region Constructor
         /// <summary>
-        /// Turns the Movies Batabse text file into accessible records.
+        /// Turns the Movies Database text file into accessible records.
         /// </summary>
         /// <param name="DatabaseFile"></param>
         public Database(string DatabaseFile)
@@ -64,9 +64,6 @@ namespace Watt_2_Watch
         /// </summary>
         public record DatabaseRecord
         {
-            /// <summary>
-            /// IMDB show identifier.
-            /// </summary>
             public string ShowId { get; init; }
             public string TitleType { get; init; }
             public string PrimaryTitle { get; init; }
@@ -83,114 +80,60 @@ namespace Watt_2_Watch
         /// <summary>
         /// Database records.
         /// </summary>
-        private List<DatabaseRecord> Records { get; init; } = new List<DatabaseRecord>();
+        public List<DatabaseRecord> Records { get; private set; } = new List<DatabaseRecord>();
         #endregion
 
         #region Methods
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="records"></param>
-        /// <returns></returns>
         private IEnumerable<DatabaseRecord> FilterByType(IEnumerable<DatabaseRecord> records)
         {
             return records.Where(rec => rec.TitleType == "tvSeries" || rec.TitleType == "movie" || rec.TitleType == "short" || rec.TitleType == "tvMiniSeries" || rec.TitleType == "tvSpecial");
         }
-        /// <summary>
-        /// Return a list of shows that aired between a range of dates.
-        /// </summary>
-        /// <param name="startYear">Starting year of air dates.</param>
-        /// <param name="endYear">Ending year of air dates.</param>
-        /// <returns>A list of shows that aired between the start and ending air dates.</returns>
+
         public List<DatabaseRecord> FilterByYearRange(int startYear, int endYear)
         {
             return FilterByType(Records).Where(rec => rec.StartYear >= startYear && rec.StartYear <= endYear).ToList();
         }
-        /// <summary>
-        /// Return a list of shows that aired between a range of dates from a provided list.
-        /// </summary>
-        /// <param name="recordList">List to process.</param>
-        /// <param name="startYear">Starting year of air dates.</param>
-        /// <param name="endYear">Ending year of air dates.</param>
-        /// <returns>A list of shows that aired between the start and ending air dates.</returns>
+
         public List<DatabaseRecord> FilterByYearRange(List<DatabaseRecord> recordList, int startYear, int endYear)
         {
             return FilterByType(recordList).Where(rec => rec.StartYear >= startYear && rec.StartYear <= endYear).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows that match or partially match a list of genres.
-        /// </summary>
-        /// <param name="genres">Show genre types.</param>
-        /// <returns>A list of shows that match provided genres.</returns>
+
         public List<DatabaseRecord> FilterByGenre(List<string> genres)
         {
             return FilterByType(Records).Where(rec => rec.Genres.Any(genre => genres.Contains(genre, StringComparer.OrdinalIgnoreCase))).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows that match or partially match a list of genres from a provided list.
-        /// </summary>
-        /// <param name="recordList">List to process.</param>
-        /// <param name="genres">Show genre types.</param>
-        /// <returns>A list of shows that match provided genres.</returns>
+
         public List<DatabaseRecord> FilterByGenre(List<DatabaseRecord> recordList, List<string> genres)
         {
             return FilterByType(recordList).Where(rec => rec.Genres.Any(genre => genres.Contains(genre, StringComparer.OrdinalIgnoreCase))).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows that match or partially match a title name.
-        /// </summary>
-        /// <param name="title">The title to be searched.</param>
-        /// <returns>A list of shows that match or are similar to a title.</returns>
+
         public List<DatabaseRecord> FilterByTitle(string title)
         {
             return FilterByType(Records).Where(rec => rec.PrimaryTitle.Contains(title, StringComparison.OrdinalIgnoreCase) || rec.OriginalTitle.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows that match or partially match a title name from a provided list.
-        /// </summary>
-        /// <param name="recordList">List to process</param>
-        /// <param name="title">The title to be searched.</param>
-        /// <returns>A list of shows that match or are similar to a title from a provided list.</returns>
+
         public List<DatabaseRecord> FilterByTitle(List<DatabaseRecord> recordList, string title)
         {
             return FilterByType(recordList).Where(rec => rec.PrimaryTitle.Contains(title, StringComparison.OrdinalIgnoreCase) || rec.OriginalTitle.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows with a duration between a range of run times.
-        /// </summary>
-        /// <param name="minDuration">Shortest duration.</param>
-        /// <param name="maxDuration">Longest duration.</param>
-        /// <returns>A list of shows that match a range of run times.</returns>
+
         public List<DatabaseRecord> FilterByDuration(int minDuration, int maxDuration)
         {
             return FilterByType(Records).Where(rec => rec.RuntimeMinutes >= minDuration && rec.RuntimeMinutes <= maxDuration).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows with a duration between a range of run times from a provided list.
-        /// </summary>
-        /// <param name="recordList">List to process.</param>
-        /// <param name="minDuration">Shortest duration.</param>
-        /// <param name="maxDuration">Longest duration.</param>
-        /// <returns>A list of shows that match a range of run times from a provided list.</returns>
+
         public List<DatabaseRecord> FilterByDuration(List<DatabaseRecord> recordList, int minDuration, int maxDuration)
         {
             return FilterByType(recordList).Where(rec => rec.RuntimeMinutes >= minDuration && rec.RuntimeMinutes <= maxDuration).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows based on a provided show type.
-        /// </summary>
-        /// <param name="showType"></param>
-        /// <returns>List of shows based on a provided show type.</returns>
+
         public List<DatabaseRecord> FilterByType(string showType)
         {
             return Records.Where(rec => rec.TitleType == showType).ToList();
         }
-        /// <summary>
-        /// Returns a list of shows based on a specified show type on a provided list.
-        /// </summary>
-        /// <param name="recordList">List to process.</param>
-        /// <param name="showType"></param>
-        /// <returns>List of shows based on a specified show type on a provided list.</returns>
+
         public List<DatabaseRecord> FilterByType(List<DatabaseRecord> recordList, string showType)
         {
             return recordList.Where(rec => rec.TitleType == showType).ToList();

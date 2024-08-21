@@ -1,0 +1,17 @@
+C:\Users\lzr51\Documents\GitHub\PRG281\bin\Debug\net8.0\Watt-2-Watch.exe
+C:\Users\lzr51\Documents\GitHub\PRG281\bin\Debug\net8.0\Watt-2-Watch.deps.json
+C:\Users\lzr51\Documents\GitHub\PRG281\bin\Debug\net8.0\Watt-2-Watch.runtimeconfig.json
+C:\Users\lzr51\Documents\GitHub\PRG281\bin\Debug\net8.0\Watt-2-Watch.dll
+C:\Users\lzr51\Documents\GitHub\PRG281\bin\Debug\net8.0\Watt-2-Watch.pdb
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt_2_Watch.Properties.Resources.resources
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.csproj.GenerateResource.cache
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.AssemblyInfoInputs.cache
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.AssemblyInfo.cs
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.csproj.CoreCompileInputs.cache
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.sourcelink.json
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.dll
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\refint\Watt-2-Watch.dll
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.pdb
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\Watt-2-Watch.genruntimeconfig.cache
+C:\Users\lzr51\Documents\GitHub\PRG281\obj\Debug\net8.0\ref\Watt-2-Watch.dll

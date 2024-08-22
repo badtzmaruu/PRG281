@@ -114,14 +114,15 @@ namespace Watt_2_Watch
             Console.WriteLine("Login failed. Press any key to try again...");
             Console.ReadKey();
         }
-
         static void MainMenu()
         {
             Console.Clear();
             Console.WriteLine("Main Menu");
             Console.WriteLine("1. View Profile");
             Console.WriteLine("2. Get Recommendations");
-            Console.WriteLine("3. Logout");
+            Console.WriteLine("3. Search for Shows");
+            Console.WriteLine("4. Rate a Show");
+            Console.WriteLine("5. Logout");
 
             string option = Console.ReadLine();
 
@@ -134,11 +135,119 @@ namespace Watt_2_Watch
                     GetRecommendations();
                     break;
                 case "3":
+                    SearchShows();
+                    break;
+                case "4":
+                    RateShow();
+                    break;
+                case "5":
                     loggedInUser = null;
                     break;
             }
         }
 
+        static void SearchShows()
+        {
+            Console.Clear();
+            Console.WriteLine("Search for Shows");
+            Console.WriteLine("1. By Genre");
+            Console.WriteLine("2. By Title");
+
+            string option = Console.ReadLine();
+            List<Database.DatabaseRecord> results = new List<Database.DatabaseRecord>();
+
+            switch (option)
+            {
+                case "1":
+                    Console.WriteLine("Enter Genre:");
+                    string genre = Console.ReadLine();
+                    results = db.FilterByGenre(new List<string> { genre });
+                    break;
+                case "2":
+                    Console.WriteLine("Enter Title:");
+                    string title = Console.ReadLine();
+                    results = db.FilterByTitle(title);
+                    break;
+                default:
+                    Console.WriteLine("Invalid option.");
+                    return;
+            }
+
+            DisplaySearchResults(results);
+        }
+
+        static void DisplaySearchResults(List<Database.DatabaseRecord> results)
+        {
+            if (results.Count > 0)
+            {
+                Console.WriteLine("Search Results:");
+                foreach (var show in results)
+                {
+                    Console.WriteLine($"{show.PrimaryTitle} ({show.StartYear}) - Genres: {string.Join(", ", show.Genres)}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No shows found matching the criteria.");
+            }
+            Console.WriteLine("Press any key to go back...");
+            Console.ReadKey();
+        }
+
+        static void RateShow()
+        {
+            Console.Clear();
+            Console.WriteLine("Rate a Show");
+            Console.WriteLine("Enter the title of the show you want to rate:");
+            string title = Console.ReadLine();
+
+            // Fetch similar shows based on the entered title
+            var similarShows = db.FilterByTitle(title);
+
+            if (similarShows.Count == 0)
+            {
+                Console.WriteLine("No shows found with that title. Press any key to go back...");
+                Console.ReadKey();
+                return;
+            }
+
+            // Display similar shows and ask the user to select one
+            Console.WriteLine("Select the show you want to rate:");
+            for (int i = 0; i < similarShows.Count; i++)
+            {
+                var show = similarShows[i];
+                Console.WriteLine($"{i + 1}. {show.PrimaryTitle} ({show.StartYear}) - Genres: {string.Join(", ", show.Genres)}");
+            }
+
+            Console.WriteLine("Enter the number of the show you want to rate:");
+            if (int.TryParse(Console.ReadLine(), out int selectedShowIndex) && selectedShowIndex > 0 && selectedShowIndex <= similarShows.Count)
+            {
+                var selectedShow = similarShows[selectedShowIndex - 1];
+
+                Console.WriteLine($"You selected: {selectedShow.PrimaryTitle} ({selectedShow.StartYear}) - Genres: {string.Join(", ", selectedShow.Genres)}");
+                Console.WriteLine("Rate this show from 1 to 5 stars:");
+                if (int.TryParse(Console.ReadLine(), out int rating) && rating >= 1 && rating <= 5)
+                {
+                    foreach (var genre in selectedShow.Genres)
+                    {
+                        loggedInUser.AddGenrePreference(genre, rating);
+                    }
+
+                    loggedInUser.WatchHistory.Add(selectedShow);
+                    Console.WriteLine("Rating recorded. Press any key to go back...");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid rating. Please enter a number between 1 and 5.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid selection. Press any key to go back...");
+            }
+
+            Console.ReadKey();
+        }
         static void ViewProfile()
         {
             Console.Clear();

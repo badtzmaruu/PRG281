@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\",
+  "WorkspaceRootPath": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\joube\\onedrive\\desktop\\github\\prg281\\resources\\moviesdatabase.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\lzr51\\documents\\github\\prg281\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\lzr51\\documents\\github\\prg281\\resources\\moviesdatabase.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|solutionrelative:resources\\moviesdatabase.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\joube\\onedrive\\desktop\\github\\prg281\\recommendationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\lzr51\\documents\\github\\prg281\\recommendationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|solutionrelative:recommendationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\joube\\onedrive\\desktop\\github\\prg281\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\lzr51\\documents\\github\\prg281\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|c:\\users\\joube\\onedrive\\desktop\\github\\prg281\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E80CA2-3627-48B7-91C3-A653BA78CE3E}|Watt-2-Watch.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +26,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MoviesDatabase.txt",
-              "DocumentMoniker": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\Resources\\MoviesDatabase.txt",
+              "DocumentMoniker": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\Resources\\MoviesDatabase.txt",
               "RelativeDocumentMoniker": "Resources\\MoviesDatabase.txt",
-              "ToolTip": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\Resources\\MoviesDatabase.txt",
+              "ToolTip": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\Resources\\MoviesDatabase.txt",
               "RelativeToolTip": "Resources\\MoviesDatabase.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
@@ -43,42 +43,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "recommendationEngine.cs",
-              "DocumentMoniker": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\recommendationEngine.cs",
+              "DocumentMoniker": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\recommendationEngine.cs",
               "RelativeDocumentMoniker": "recommendationEngine.cs",
-              "ToolTip": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\recommendationEngine.cs",
+              "ToolTip": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\recommendationEngine.cs",
               "RelativeToolTip": "recommendationEngine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:00:18.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\Database.cs",
-              "RelativeDocumentMoniker": "Database.cs",
-              "ToolTip": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\Database.cs",
-              "RelativeToolTip": "Database.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:00:17.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T13:00:18.016Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\Database.cs",
+              "RelativeDocumentMoniker": "Database.cs",
+              "ToolTip": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\Database.cs",
+              "RelativeToolTip": "Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T13:00:17.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\joube\\OneDrive\\Desktop\\GitHub\\PRG281\\Program.cs",
+              "ToolTip": "C:\\Users\\lzr51\\Documents\\GitHub\\PRG281\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAPwBAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAmwKMAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T12:59:26.304Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 54,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }
